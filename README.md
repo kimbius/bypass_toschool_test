@@ -10,7 +10,7 @@ const Room = ""; // ห้อง
 let req = await fetch("https://toschool.in/toschoolsource/php/getExamData.php?tbCode=132&SID=465&Sclass="+Class+"&Sroom="+Room+"&sUrl=toschool_bksc");
 let res = await req.json();
 for(let obj of res) {
-    console.log("%s > EID: %s", obj["title"], obj["test_EID"] || "ไปกดเริ่มทำข้อสอบก่อน")
+    console.log("%s > EID: %s", obj["title"], obj["test_EID"] || "ยังไม่เปิดให้สอบ")
 }
 ```
 
