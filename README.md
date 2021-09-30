@@ -17,8 +17,8 @@ for(let obj of res) {
 ```js
 const EID = ""; // EID
 
-await fetch("https://toschool.in/toschoolsource/php/getExamData.php?tbCode=152&curEID=" + EID + "&sUrl=toschool_bksc").then(res => {
-    for (let quiz of res.data) {
+await fetch("https://toschool.in/toschoolsource/php/getExamData.php?tbCode=152&curEID=" + EID + "&sUrl=toschool_bksc").then(res => res.json()).then(res => {
+    for (let quiz of res) {
         let answer = quiz["choice" + (quiz.point.split(",").indexOf("1") + 1)]
         console.log(quiz.quiz_no + ": " + answer);
     }
