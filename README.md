@@ -1,5 +1,7 @@
 # Bypass Toschool Test
 
+รันใน console ของ browser นะควัฟ
+
 GET EID
 ```js
 const Class = ""; // ชั้น
